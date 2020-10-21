@@ -130,7 +130,7 @@ const TableBox = ({columns, data}) => {
 
 export default TableBox;
 
-const TableWrapper = styled.table`
+const TableWrapper = styled.div`
     width: 70%;
     margin: auto
 `

@@ -1,6 +1,6 @@
 export const columnsTeams = [
   {
-  Header: 'Name',
+  Header: 'Football Teams',
     columns: [
       {
         Header: 'Name',
@@ -20,7 +20,7 @@ export const columnsTeams = [
 
 export const columnsTeam = [
   {
-  Header: 'Name',
+  Header: 'Players',
     columns: [
       {
         Header: 'First Name',
