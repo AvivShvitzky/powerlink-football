@@ -4,7 +4,6 @@ import { useHistory, useParams } from 'react-router-dom';
 import { useTable, usePagination } from 'react-table'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
 function Table({ columns, data }) {
   const history = useHistory();
   const navigationTeam = team => history.push(`/teams/${team.TeamId}`, team);
