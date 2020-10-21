@@ -51,14 +51,14 @@ function Table({ columns, data }) {
                   {page.map((row, i) => {
                       prepareRow(row)
                       return (
-                          <tr 
+                          <TableRow 
                             onClick={isTeamPage ? undefined : () => navigationTeam(row.original)}
                             {...row.getRowProps()} 
                           >
                               {row.cells.map(cell => {
                                   return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
                               })}
-                          </tr>
+                          </TableRow>
                       )
                   })}
               </tbody>
@@ -132,4 +132,9 @@ export default TableBox;
 const TableWrapper = styled.div`
     width: 70%;
     margin: auto
+
+`
+
+const TableRow = styled.tr`
+    cursor: pointer;
 `
