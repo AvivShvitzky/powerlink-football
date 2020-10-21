@@ -51,7 +51,8 @@ function Table({ columns, data }) {
                   {page.map((row, i) => {
                       prepareRow(row)
                       return (
-                          <TableRow 
+                          <TableRow
+                            isTeamPage={isTeamPage}
                             onClick={isTeamPage ? undefined : () => navigationTeam(row.original)}
                             {...row.getRowProps()} 
                           >
@@ -136,5 +137,5 @@ const TableWrapper = styled.div`
 `
 
 const TableRow = styled.tr`
-    cursor: pointer;
+cursor: ${props => props.isTeamPage ? 'inheret' : 'pointer'};
 `
