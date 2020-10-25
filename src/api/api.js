@@ -15,31 +15,17 @@ const requests = {
 
 export const teamsAPI = {
   /**
-   * Returns information about teams in the english league.
+   * Returns information about football teams.
   */
   teams() {
     return requests.get(`Teams`).then(res => res)
    },
+  /**
+   * Returns information about players of a certain football team.
+  */
    team(teamId) {
     return requests.get(`PlayersByTeam/${teamId}`).then(res => res)
    }
-  // /**
-  // * Returns the website daily log-ins of an organization.
-  // * @param {String} organizationName
-  // * @returns _id(represents a date), count
-  // */
-  // orgDailyLogs: organizationName => {
-  //   return requests.get(`logins/daily/${organizationName}`).then(res => res.Success)
-  // },
 }
 
-export const auth = {
-  login: (email, password) => {
-    let body = {
-      email,
-      password
-    }
-    return requests.post(`auth/login`, body)
-  },
-}
 
